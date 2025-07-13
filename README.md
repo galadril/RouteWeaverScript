@@ -66,78 +66,106 @@ python main.py /path/to/photos
 
 <details>
 <summary><b>📸 Photo Processing</b></summary>
-# Basic photo processing
+# Basic photo processing 
+  
 python main.py "C:\Photos\2023-Europe-Trip"
 
-# Enhanced processing with all features
+# Enhanced processing with all features 
+
 python main.py "C:\Photos\2023-Europe-Trip" --infer --filename-dates --advanced-map --geocode
 
-# Custom output files
+# Custom output files 
+
 python main.py "C:\Photos\Trip" "custom.gpx" "summary.md" "data.csv" "map.html"
+
 </details>
 
 <details>
 <summary><b>🌍 Custom Route Creation</b></summary>
-# Simple city-to-city route
+# Simple city-to-city route 
+  
 python main.py --route-cities "London, UK" "Paris, France" "Amsterdam, Netherlands"
 
-# Route with specific dates
+# Route with specific dates 
+
 python main.py --route-cities "Tokyo, Japan" "Kyoto, Japan" "Osaka, Japan" \
   --route-dates 2024-03-15 2024-03-18 2024-03-21
 
-# USA West Coast adventure
+# USA West Coast adventure 
+
 python main.py --route-cities "San Francisco, CA" "Yosemite National Park" "Las Vegas, NV" \
   --route-dates 2024-05-12 2024-05-15 2024-05-18 \
   --route-gpx-output "west_coast.gpx" --route-html-output "west_coast.html"
 </details>
 
 <details>
+  
 <summary><b>📍 Custom Locations</b></summary>
 
 Create a `custom_locations.json` file:{
   "Monument Valley Tribal Park": [37.0042, -110.1129],
   "Secret Beach, Kauai": [22.2171, -159.3686],
   "My Favorite Restaurant": [40.7589, -73.9851]
-}# Use custom locations in routes
+}
+
+# Use custom locations in routes
+
 python main.py --route-cities "San Francisco, CA" "Monument Valley Tribal Park" \
   --custom-locations-file custom_locations.json
 </details>
 
 <details>
 <summary><b>📁 Batch & Multi-Folder Processing</b></summary>
-# Process multiple folders
+  
+# Process multiple folders 
+
 python main.py --multi-folders "C:\Photos\Trip1" "C:\Photos\Trip2" --infer
 
-# Batch process entire photo library
+# Batch process entire photo library 
+
 python main.py --batch "C:\Photos" --batch-output "TripArchive" --infer --filename-dates
 
-# Advanced batch processing with geocoding
+# Advanced batch processing with geocoding 
+
 python main.py --batch "C:\Photos" --geocode --skip-preview
 </details>
 
 <details>
 <summary><b>🛰️ GPX Integration</b></summary>
-# Import existing GPX file
+   
+# Import existing GPX file 
+
 python main.py "C:\Photos\Hiking-Trip" --gpx-import "route.gpx" --infer
 
-# Search for GPX files in directories
+# Search for GPX files in directories 
+
 python main.py "C:\Photos\GPS-Logs" --gpx-search "C:\GPS-Data" "C:\Downloads\GPX"
 
-# Treat GPX as single route (no clustering)
+# Treat GPX as single route (no clustering) 
+
 python main.py "C:\Photos\Road-Trip" --gpx-import "route.gpx" --gpx-as-route
+
 </details>
 
 <details>
 <summary><b>🌟 Real-World Adventures</b></summary>
 
-**🏞️ USA National Parks Road Trip**python main.py --route-cities "Denver, CO" "Rocky Mountain National Park" \
+**🏞️ USA National Parks Road Trip** 
+
+python main.py --route-cities "Denver, CO" "Rocky Mountain National Park" \
   "Arches National Park, UT" "Zion National Park, UT" "Grand Canyon, AZ" \
   --route-dates 2024-07-01 2024-07-03 2024-07-05 2024-07-07 2024-07-09
-**🏰 European City Tour**python main.py --route-cities "London, UK" "Brussels, Belgium" "Amsterdam, Netherlands" \
+  
+**🏰 European City Tour** 
+
+python main.py --route-cities "London, UK" "Brussels, Belgium" "Amsterdam, Netherlands" \
   "Berlin, Germany" "Prague, Czech Republic" "Vienna, Austria" \
   --route-start-date 2024-09-01
-**🏝️ Southeast Asian Adventure**python main.py --route-cities "Bangkok, Thailand" "Chiang Mai, Thailand" \
-  "Hanoi, Vietnam" "Siem Reap, Cambodia" --route-gpx-output "asia_trip.gpx"
+  
+**🏝️ Southeast Asian Adventure** 
+
+python main.py --route-cities "Bangkok, Thailand" "Chiang Mai, Thailand" \
+  "Hanoi, Vietnam" "Siem Reap, Cambodia" --route-gpx-output "asia_trip.gpx" 
 </details>
 
 ## ⚙️ Command Reference
