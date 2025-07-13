@@ -1,0 +1,6 @@
+piexif
+gpxpy
+geopy
+haversine
+folium
+Pillow
